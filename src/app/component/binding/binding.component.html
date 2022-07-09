@@ -1,0 +1,8 @@
+<p>binding works!</p>
+<figure>
+  <img *ngIf="image.hidden" src={{image.url}} alt={{image.alt}}>
+  <figcaption>{{image.alt}}</figcaption>
+</figure>
+<input type="text" [(ngModel)]="image.alt">
+<p>Is pic shown? {{!image.hidden}}</p>
+<button (click)="toggleImage()">Toggle</button>
